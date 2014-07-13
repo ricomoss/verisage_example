@@ -6,6 +6,9 @@ class BaseModel(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        abstract = True
+
 
 class Group(models.Model):
     name = models.CharField(max_length=25)
@@ -33,6 +36,7 @@ class Person(AllocationEntity, BaseModel):
     _first_name = models.CharField(max_length=25)
     _last_name = models.CharField(max_length=25)
     capacity = models.FloatField()
+    skills = models.ManyToManyField(Skill)
 
 
 class DurationEntity(BaseModel):

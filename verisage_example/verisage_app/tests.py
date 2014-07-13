@@ -97,4 +97,25 @@ class PersonTest(TestStructureSetup):
 
     def test_person(self):
         guido_projects = models.Project.objects.filter(tech_lead=self.person3)
-        self.assertEqual(guido_projects, list())
+        self.assertEqual(len(guido_projects), 0)
+
+        self.assertEqual(models.Person.objects.all().count(), 13)
+
+        self.assertEqual(
+            models.Person.objects.filter(_first_name='john').count(), 1)
+
+
+class SkillTest(TestStructureSetup):
+    def test_skill(self):
+        self.assertEqual(models.Skill.objects.all().count(), 0)
+
+        skill = self.factory.create(models.Skill)
+        self.person1.skills.add(skill)
+        self.person1.save()
+
+        self.assertEqual(
+            models.Skill.objects.all().count(),
+            self.person1.skills.all().count())
+
+        self.assertEqual(self.person1.skills.all().count(), 1)
+
