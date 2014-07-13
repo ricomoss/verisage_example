@@ -47,7 +47,7 @@ the website development environment.
 
 6.  Create your project virtualenv and deactivate it::
 
-        $ mkvirtualenv verisage
+        $ mkvirtualenv verisage -p /usr/bin/python3
         $ deactivate
 
 7.  Add the following to the end of the file
