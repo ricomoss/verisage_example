@@ -1,5 +1,3 @@
 django
-django-extensions
 django-fixtureless
 ipython
-pygraphviz
