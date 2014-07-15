@@ -29,7 +29,7 @@ the website development environment.
 
 2.  Install some required packages::
 
-        $ sudo apt-get install python3 python3-dev python-pip build-essential postgresql postgresql-contrib libpq-dev
+        $ sudo apt-get install python3 python3-dev python-pip build-essential libpq-dev
 
 3.  Install virtualenv and virtualenvwrapper::
 
