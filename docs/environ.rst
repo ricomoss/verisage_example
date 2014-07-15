@@ -3,8 +3,7 @@ Environment Setup
 =================
 
 This guide will help you set up your development environment in order to start
-working on the project.  It may also be of use in setting up a
-production server.
+working on the project.
 
 Linux Installation (Ubuntu/Debian)
 ==================================
